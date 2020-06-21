@@ -793,7 +793,7 @@ sigs.k8s.io/cluster-api-provider-aws/pkg/apis/awsprovider/v1beta1
 sigs.k8s.io/cluster-api-provider-azure/pkg/apis/azureprovider/v1beta1
 # sigs.k8s.io/cluster-api-provider-gcp v0.0.0-00010101000000-000000000000 => github.com/openshift/cluster-api-provider-gcp v0.0.1-0.20200528175251-4f2fdeb49fe1
 sigs.k8s.io/cluster-api-provider-gcp/pkg/apis/gcpprovider/v1beta1
-# sigs.k8s.io/controller-runtime v0.6.0 => github.com/mgugino-upstream-stage/controller-runtime v0.6.1-0.20200618201807-9d82bf2a7266
+# sigs.k8s.io/controller-runtime v0.6.0 => github.com/alvaroaleman/controller-runtime v0.1.5-0.20200619152754-4a802fb9b747
 sigs.k8s.io/controller-runtime
 sigs.k8s.io/controller-runtime/pkg/builder
 sigs.k8s.io/controller-runtime/pkg/cache

@@ -7,7 +7,6 @@ aliases:
   - directxman12
   - droot
   - mengqiy
-  - pwittrock
 
   # non-admin folks who have write-access and can approve any PRs in the repo
   controller-runtime-maintainers:
@@ -37,4 +36,5 @@ aliases:
 
   # folks who may have context on ancient history,
   # but are no longer directly involved
-  # controller-runtime-emeritus-maintainers:
+  controller-runtime-emeritus-maintainers:
+  - pwittrock

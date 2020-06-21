@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"testing"
+	"time"
 
 	. "github.com/onsi/gomega"
 	osconfigv1 "github.com/openshift/api/config/v1"
@@ -145,10 +146,12 @@ func TestMachineCreation(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			gs := NewWithT(t)
 
+			gracefulShutdownTimeout := 500 * time.Millisecond
 			mgr, err := manager.New(cfg, manager.Options{
-				MetricsBindAddress: "0",
-				Port:               testEnv.WebhookInstallOptions.LocalServingPort,
-				CertDir:            testEnv.WebhookInstallOptions.LocalServingCertDir,
+				GracefulShutdownTimeout: &gracefulShutdownTimeout,
+				MetricsBindAddress:      "0",
+				Port:                    testEnv.WebhookInstallOptions.LocalServingPort,
+				CertDir:                 testEnv.WebhookInstallOptions.LocalServingCertDir,
 			})
 			gs.Expect(err).ToNot(HaveOccurred())
 
@@ -543,10 +546,12 @@ func TestMachineUpdate(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			gs := NewWithT(t)
 
+			gracefulShutdownTimeout := 500 * time.Millisecond
 			mgr, err := manager.New(cfg, manager.Options{
-				MetricsBindAddress: "0",
-				Port:               testEnv.WebhookInstallOptions.LocalServingPort,
-				CertDir:            testEnv.WebhookInstallOptions.LocalServingCertDir,
+				GracefulShutdownTimeout: &gracefulShutdownTimeout,
+				MetricsBindAddress:      "0",
+				Port:                    testEnv.WebhookInstallOptions.LocalServingPort,
+				CertDir:                 testEnv.WebhookInstallOptions.LocalServingCertDir,
 			})
 			gs.Expect(err).ToNot(HaveOccurred())
 
